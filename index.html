@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV – Fernando Sarquis</title>
+
+  <!-- Google Fonts: Poppins para títulos + Inter para cuerpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<!--
+  El body arranca con la clase "dark-mode".
+  JavaScript se encarga de agregarla/quitarla al presionar el botón de tema.
+-->
+<body>
+
+  <!-- ===== BOTÓN DE MODO OSCURO / CLARO (JavaScript) ===== -->
+  <button class="theme-toggle" id="themeToggle">🌙 Modo Oscuro</button>
+
+  <!-- ===== CONTENEDOR PRINCIPAL (layout de dos columnas con flexbox) ===== -->
+  <div class="cv-wrapper">
+
+    <!-- ==================== SIDEBAR (columna izquierda) ==================== -->
+    <aside class="sidebar">
+
+      <!-- Foto + Nombre + Título -->
+      <div class="profile">
+        <!--
+          Imagen de Apu Nahasapeemapetilon.
+          Si esta URL no carga, reemplazá src por una imagen local (ej. foto.png)
+          o por cualquier URL directa de imagen.
+        -->
+        <div class="photo-frame">
+          <img
+            src="foto1.jpg"
+            alt="Fernando Sarquis – Foto de perfil"
+            class="profile-photo"
+            id="profilePhoto"
+          />
+        </div>
+        <h1 class="profile-name">Fernando Sarquis</h1>
+        <p class="profile-title">Propietario del Kwik-E-Mart<br />Doctor en Cs. de la Computación</p>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <!-- Datos de contacto -->
+      <div class="sidebar-section">
+        <h3 class="sidebar-heading">Contacto</h3>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="contact-icon">📧</span>
+            <!-- mailto: hace que al hacer clic se abra el cliente de correo del usuario -->
+            <a href="mailto:apu@kwikEmart.com" class="contact-link">apu@kwikEmart.com</a>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon">📱</span>
+            <span>+1 (555) KWK-MART</span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon">📍</span>
+            <span>742 Evergreen Terrace, Springfield</span>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="sidebar-divider" />
+
+      <!-- Habilidades con barras visuales -->
+      <div class="sidebar-section">
+        <h3 class="sidebar-heading">Habilidades</h3>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Gestión de Inventario</span>
+            <span class="skill-pct">98%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill fill-98"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Matemáticas Avanzadas</span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill fill-95"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Servicio al Cliente</span>
+            <span class="skill-pct">100%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill fill-100"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Frase al pie del sidebar -->
+      <p class="sidebar-quote">"¡Gracias, vuelva prontos!"</p>
+
+    </aside>
+    <!-- fin sidebar -->
+
+
+    <!-- ==================== CONTENIDO PRINCIPAL (columna derecha) ==================== -->
+    <main class="main-content">
+
+      <!-- SECCIÓN 1: Sobre mí -->
+      <section id="sobre-mi" class="section">
+        <h2 class="section-title">
+          <span class="title-accent">01.</span> Sobre Mí
+        </h2>
+        <p class="section-text">
+          Soy Fernando Sarquis, oriundo de Rahul, India, y orgulloso ciudadano de Springfield.
+          Doctor en Ciencias de la Computación por el Instituto Tecnológico de Calcuta,
+          con un promedio de 7.0 sobre una escala de 4.0 —sí, eso es posible cuando uno
+          está verdaderamente comprometido con la excelencia académica—.
+          Llevo más de tres décadas al frente del Kwik-E-Mart, perfeccionando el arte de
+          atender clientes los 365 días del año, las 23 horas del día (la hora restante
+          la dedico a respirar y a mis ocho hijos octillizos).
+          Esposo devoto de Manjula y apasionado de los Squishees sabor mango.
+          Mi filosofía de vida: <em>"Si no está en el Kwik-E-Mart, no lo necesitás."</em>
+        </p>
+      </section>
+
+      <!-- SECCIÓN 2: Experiencia y Formación -->
+      <section id="experiencia" class="section">
+        <h2 class="section-title">
+          <span class="title-accent">02.</span> Experiencia &amp; Formación
+        </h2>
+
+        <!-- Tarjeta 1: Empleo -->
+        <div class="card">
+          <div class="card-top">
+            <div class="card-left">
+              <h3 class="card-title">Propietario &amp; Operador General</h3>
+              <p class="card-company">
+                <!--
+                  target="_blank" abre el link en una pestaña nueva.
+                  rel="noopener" es una buena práctica de seguridad para links externos.
+                -->
+                <a
+                  href="https://simpsons.fandom.com/wiki/Kwik-E-Mart"
+                  target="_blank"
+                  rel="noopener"
+                  class="company-link"
+                >
+                  🏪 Kwik-E-Mart — Springfield, IL
+                </a>
+              </p>
+            </div>
+            <span class="card-date">1989 – Presente</span>
+          </div>
+          <ul class="card-list">
+            <li>Gestión integral de tienda de conveniencia, abierta las 23 hs del día.</li>
+            <li>Control de inventario de Squishees, donuts y más de 2.000 productos distintos.</li>
+            <li>Atención personalizada a más de 500 clientes diarios, con sonrisa garantizada.</li>
+            <li>
+              Email de contacto laboral:
+              <!-- mailto: es la forma estándar de crear links de correo en HTML -->
+              <a href="mailto:corporate@kwikEmart.com" class="inline-link">corporate@kwikEmart.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta 2: Formación académica -->
+        <div class="card">
+          <div class="card-top">
+            <div class="card-left">
+              <h3 class="card-title">Doctorado en Ciencias de la Computación</h3>
+              <p class="card-company">Instituto Tecnológico de Calcuta</p>
+            </div>
+            <span class="card-date">1975 – 1983</span>
+          </div>
+          <ul class="card-list">
+            <li>Promedio académico: 7.0 / 4.0 (distinción máxima de la institución).</li>
+            <li>Tesis: <em>"Algoritmos de optimización aplicados a la gestión minorista de conveniencia"</em>.</li>
+            <li>Mención de honor del decano por asistencia perfecta durante ocho años consecutivos.</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- SECCIÓN 3: Formulario de contacto -->
+      <section id="contacto" class="section">
+        <h2 class="section-title">
+          <span class="title-accent">03.</span> Contacto
+        </h2>
+
+        <!--
+          <form> agrupa todos los campos del formulario.
+          onsubmit="return false;" evita que recargue la página al enviar
+          (porque este form no tiene backend real).
+        -->
+        <form class="contact-form" id="contactForm" onsubmit="return false;">
+
+          <div class="form-row">
+            <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+            <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+          </div>
+
+          <textarea
+            class="form-input form-textarea"
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            placeholder="Mensaje..."
+          ></textarea>
+
+          <button type="submit" class="submit-btn">
+            <span>Enviar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+
+        </form>
+      </section>
+
+    </main>
+    <!-- fin main-content -->
+
+  </div>
+  <!-- fin cv-wrapper -->
+
+  <!-- El script va al final del body para que el HTML ya esté cargado cuando se ejecute -->
+  <script src="script.js"></script>
+</body>
+</html>
